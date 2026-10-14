@@ -1,0 +1,2 @@
+Place the approved intro video here as sir1_1.mp4. It is intentionally not bundled.
+For production, consider CDN delivery and a compressed H.264 MP4.

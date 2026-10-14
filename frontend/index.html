@@ -1,0 +1,3415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build Your Own Supplement Brand with Dropshipping | Gomzi Life Sciences Free Webinar</title>
+  <meta name="description" content="Join the free live webinar by Gomzi Life Sciences on 1 November 2026 at 12:00 PM IST. Discover how e-commerce business owners can launch their own branded supplement line with zero inventory risk.">
+  <meta name="theme-color" content="#0B0F0C">
+  <link rel="icon" type="image/webp" href="/favicon.webp">
+  <link rel="apple-touch-icon" href="/favicon.webp">
+  
+  <!-- Typography: Plus Jakarta Sans (Headings) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       DESIGN TOKENS & RESET (DARK LUXURY D2C AESTHETIC)
+       ========================================================================== */
+    :root {
+      --bg-dark-base: #060807;
+      --bg-dark-surface: #0B0F0C;
+      --bg-dark-card: #121814;
+      --bg-dark-card-hover: #17211a;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(116, 183, 46, 0.3);
+      --gls-green: #74B72E;
+      --gls-green-hover: #639f26;
+      --gls-green-glow: rgba(116, 183, 46, 0.25);
+      --gold-accent: #C9A86A;
+      --gold-subtle: rgba(201, 168, 106, 0.2);
+      --text-pure: #FFFFFF;
+      --text-muted: #A3B1A7;
+      --text-dim: #6B7A70;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-pill: 9999px;
+      --shadow-card: 0 16px 40px rgba(0, 0, 0, 0.6);
+      --shadow-glow: 0 0 35px var(--gls-green-glow);
+      --font-heading: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --font-body: 'Inter', -apple-system, sans-serif;
+      --font-quote: 'Playfair Display', Georgia, serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-dark-base);
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-dark-base);
+      color: var(--text-pure);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button, input, select {
+      font: inherit;
+    }
+
+    /* Common Section Styles */
+    .section-py {
+      padding: 30px 0;
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 24px;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gls-green);
+      background: rgba(116, 183, 46, 0.08);
+      border: 1px solid rgba(116, 183, 46, 0.2);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 2.35rem;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: var(--text-pure);
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--gls-green);
+      color: #050806;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+      padding: 16px 36px;
+      border-radius: var(--radius-pill);
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 8px 24px rgba(116, 183, 46, 0.35);
+      text-transform: uppercase;
+    }
+
+    .btn-cta:hover {
+      background: #84cb36;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(116, 183, 46, 0.5);
+    }
+
+    /* ==========================================================================
+       NAVIGATION & TOP BAR
+       ========================================================================== */
+    .top-notification {
+      background: linear-gradient(90deg, #0e1610, #142018, #0e1610);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 8px 16px;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+
+    .top-notification strong {
+      color: var(--gls-green);
+    }
+
+    header.site-header {
+      background: rgba(6, 8, 7, 0.9);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 8px 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-logo-svg {
+      height: 42px;
+      width: auto;
+      display: block;
+    }
+
+    .header-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .header-pill {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      border: 1px solid var(--border-subtle);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* ==========================================================================
+       SECTION 1: HERO SECTION WITH INTRODUCTION VIDEO
+       ========================================================================== */
+    .hero-section {
+      padding: 12px 0 30px;
+      position: relative;
+      background: radial-gradient(circle at 50% 20%, rgba(116, 183, 46, 0.08) 0%, transparent 60%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.95fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(116, 183, 46, 0.12);
+      border: 1px solid var(--border-accent);
+      color: var(--gls-green);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 20px;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      background: #ff3b30;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #ff3b30;
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.5; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.2); }
+      100% { opacity: 0.5; transform: scale(0.9); }
+    }
+
+    .hero-headline {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: var(--text-pure);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .hero-headline span.highlight {
+      background: linear-gradient(135deg, #FFFFFF 0%, #C9A86A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subhead {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 28px;
+      max-width: 580px;
+    }
+
+    .hero-event-bar {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: linear-gradient(135deg, rgba(14, 22, 16, 0.92) 0%, rgba(8, 12, 9, 0.96) 100%);
+      border: 1px solid rgba(116, 183, 46, 0.25);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      margin-bottom: 32px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), 0 0 30px rgba(116, 183, 46, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-event-bar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gls-green), transparent);
+      opacity: 0.85;
+    }
+
+    .event-schedule-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .event-info-item {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      background: rgba(116, 183, 46, 0.06);
+      border: 1px solid rgba(116, 183, 46, 0.18);
+      transition: all 0.25s ease;
+    }
+
+    .event-info-item:hover {
+      background: rgba(116, 183, 46, 0.12);
+      border-color: rgba(116, 183, 46, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .event-info-header {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--gls-green);
+    }
+
+    .event-icon {
+      color: var(--gls-green);
+      flex-shrink: 0;
+    }
+
+    .event-info-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--text-muted);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .event-info-value {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: #92e542;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      text-shadow: 0 0 16px rgba(116, 183, 46, 0.4);
+      white-space: nowrap;
+    }
+
+    .event-schedule-divider {
+      width: 1px;
+      height: 38px;
+      background: linear-gradient(180deg, transparent, rgba(116, 183, 46, 0.35), transparent);
+    }
+
+    .countdown-cluster {
+      margin-left: auto;
+      display: flex;
+      gap: 10px;
+    }
+
+    .timer-slot {
+      text-align: center;
+      min-width: 62px;
+      background: rgba(116, 183, 46, 0.1);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-sm);
+      padding: 10px 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .timer-slot .digits {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.55rem;
+      color: var(--gls-green);
+      line-height: 1;
+      display: block;
+      margin-bottom: 5px;
+      text-shadow: 0 0 10px rgba(116, 183, 46, 0.3);
+    }
+
+    .timer-slot .unit {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      color: var(--text-pure);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    /* Creatively Adjustable Registration Event Schedule Module */
+    .reg-event-card {
+      margin-top: 22px;
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px 18px;
+      background: linear-gradient(180deg, rgba(20, 32, 22, 0.75) 0%, rgba(9, 14, 11, 0.9) 100%);
+      border: 1px solid rgba(116, 183, 46, 0.35);
+      border-radius: 100px;
+      padding: 10px 24px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45), 0 0 20px rgba(116, 183, 46, 0.1);
+      max-width: 100%;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .reg-event-card:hover {
+      border-color: rgba(146, 229, 66, 0.55);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 25px rgba(116, 183, 46, 0.18);
+    }
+
+    .reg-event-live-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(116, 183, 46, 0.12);
+      border: 1px solid rgba(116, 183, 46, 0.3);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #bbf781;
+      letter-spacing: 0.02em;
+    }
+
+    .reg-live-pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #74B72E;
+      box-shadow: 0 0 8px #74B72E;
+      display: inline-block;
+      animation: regLivePulse 1.8s infinite ease-in-out;
+    }
+
+    @keyframes regLivePulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(116, 183, 46, 0.7);
+      }
+      50% {
+        transform: scale(1.15);
+        opacity: 0.85;
+        box-shadow: 0 0 0 6px rgba(116, 183, 46, 0);
+      }
+    }
+
+    .reg-live-icon {
+      font-size: 0.95rem;
+      line-height: 1;
+    }
+
+    .reg-live-title {
+      color: #92e542;
+      font-weight: 700;
+    }
+
+    .reg-event-schedule-grid {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .reg-schedule-tile {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-align: left;
+    }
+
+    .reg-tile-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .reg-tile-emoji {
+      font-size: 1.15rem;
+      line-height: 1;
+    }
+
+    .reg-tile-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      display: none;
+    }
+
+    .reg-tile-val {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: #9bf048;
+      font-family: var(--font-heading);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      text-shadow: 0 0 10px rgba(116, 183, 46, 0.3);
+    }
+
+    .reg-schedule-tile-divider {
+      width: 1px;
+      height: 22px;
+      background: linear-gradient(180deg, transparent 0%, rgba(116, 183, 46, 0.45) 50%, transparent 100%);
+    }
+
+    .hero-reassurance {
+      margin-top: 14px;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Hero Video Container */
+    .hero-video-box {
+      background: #000;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-accent);
+      padding: 6px;
+      box-shadow: var(--shadow-card), var(--shadow-glow);
+      position: relative;
+    }
+
+    .hero-video-box video {
+      width: 100%;
+      height: 100%;
+      border-radius: 18px;
+      object-fit: contain;
+      display: block;
+      aspect-ratio: 1 / 1;
+      background: #0B0F0C;
+    }
+
+    .video-overlay-bar {
+      position: absolute;
+      bottom: 18px;
+      left: 18px;
+      right: 18px;
+      background: rgba(11, 15, 12, 0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-pure);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       SECTION 2: THE OPPORTUNITY
+       ========================================================================== */
+    .opp-visual-panel {
+      background: var(--bg-dark-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      box-shadow: var(--shadow-card);
+    }
+
+    .opp-visual-preview {
+      background: #030504;
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      position: relative;
+    }
+
+    .opp-bridge-flow {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .bridge-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--bg-dark-card);
+      border: 1px solid var(--border-subtle);
+      padding: 16px;
+      border-radius: var(--radius-sm);
+    }
+
+    .bridge-icon-box {
+      width: 44px;
+      height: 44px;
+      background: rgba(116, 183, 46, 0.1);
+      border: 1px solid var(--border-accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: var(--gls-green);
+      font-size: 0.95rem;
+    }
+
+    /* ==========================================================================
+       SECTION 3: TRADITIONAL MANUFACTURING CHALLENGES
+       ========================================================================== */
+    .challenges-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .challenge-card {
+      background: linear-gradient(145deg, rgba(24, 18, 18, 0.85) 0%, rgba(15, 11, 11, 0.95) 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 24px 22px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      backdrop-filter: blur(8px);
+    }
+
+    .challenge-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #ff5c5c, transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .challenge-card:hover {
+      border-color: rgba(255, 92, 92, 0.35);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 24px rgba(255, 92, 92, 0.2);
+      background: linear-gradient(145deg, rgba(33, 20, 20, 0.92) 0%, rgba(20, 14, 14, 0.98) 100%);
+    }
+
+    .challenge-card:hover::before {
+      opacity: 1;
+    }
+
+    .challenge-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .challenge-cross {
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #ff5c5c;
+      background: rgba(255, 92, 92, 0.1);
+      border: 1px solid rgba(255, 92, 92, 0.25);
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .challenge-num {
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--text-dim);
+      letter-spacing: 0.05em;
+    }
+
+    .challenge-card-body {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .challenge-icon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      background: rgba(255, 92, 92, 0.08);
+      border: 1px solid rgba(255, 92, 92, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ff5c5c;
+      transition: all 0.3s ease;
+    }
+
+    .challenge-card:hover .challenge-icon {
+      background: #ff5c5c;
+      color: #060807;
+      box-shadow: 0 0 16px rgba(255, 92, 92, 0.35);
+      transform: scale(1.05);
+    }
+
+    .challenge-title {
+      font-family: var(--font-heading);
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: var(--text-pure);
+      line-height: 1.3;
+      margin: 0;
+    }
+
+    .challenge-bridge-note {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--gls-green);
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    /* ==========================================================================
+       SECTION 4: INTRODUCING THE GLS DROPSHIPPING MODEL
+       ========================================================================== */
+    .flow-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      position: relative;
+    }
+
+    /* SVG Timeline Connector Layer */
+    .flow-connector-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      overflow: visible;
+    }
+
+    .flow-connector-path {
+      fill: none;
+      stroke-linecap: round;
+      pointer-events: none;
+    }
+
+    .flow-connector-path.base-path {
+      stroke: #162417; /* Dark olive subtle inactive line */
+      stroke-width: 2.5px;
+      opacity: 0.85;
+    }
+
+    .flow-connector-path.glow-path {
+      stroke: rgba(126, 190, 50, 0.45);
+      stroke-width: 6px;
+      opacity: 0.85;
+    }
+
+    .flow-connector-path.active-path {
+      stroke: #7EBE32; /* Vibrant GLS Green progress line */
+      stroke-width: 2.5px;
+    }
+
+    .flow-connector-head {
+      pointer-events: none;
+      opacity: 0;
+      transform-origin: center;
+      will-change: cx, cy, opacity;
+      filter: drop-shadow(0 0 5px rgba(155, 240, 72, 0.8));
+    }
+
+    .flow-step-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      z-index: 2;
+    }
+    
+    .flow-img-wrapper {
+      position: relative;
+      margin-bottom: 20px;
+      display: inline-block;
+      z-index: 2;
+      background: var(--bg-dark-surface);
+      border-radius: 50%;
+    }
+
+    .flow-step-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(126, 190, 50, 0.35); /* Inactive subtle border */
+      background: var(--bg-dark-surface);
+      box-shadow: 0 0 12px rgba(116, 183, 46, 0.1);
+      transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: block;
+    }
+
+    .flow-step-card::after {
+      display: none !important;
+    }
+
+    .flow-step-badge {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: #8da292;
+      background: #142016; /* Inactive badge */
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+      border: 2px solid rgba(126, 190, 50, 0.3);
+      transition: background 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Activated Step State */
+    .flow-step-card.step-active .flow-step-img {
+      border-color: #8fe53e;
+      box-shadow: 0 0 25px rgba(116, 183, 46, 0.5), 0 0 10px rgba(143, 229, 62, 0.35);
+      transform: scale(1.02);
+    }
+
+    .flow-step-card.step-active .flow-step-badge {
+      background: var(--gls-green);
+      color: #060807;
+      border-color: #060807;
+      box-shadow: 0 0 16px rgba(116, 183, 46, 0.7);
+      transform: scale(1.08);
+    }
+
+    /* Brief Brightening Pulse when connector reaches the step */
+    .flow-step-card.pulse-highlight .flow-step-img {
+      border-color: #ffffff;
+      box-shadow: 0 0 35px rgba(155, 240, 72, 0.8), 0 0 15px rgba(255, 255, 255, 0.6);
+      transform: scale(1.04);
+    }
+
+    .flow-step-card.pulse-highlight .flow-step-badge {
+      background: #bbf781;
+      box-shadow: 0 0 24px #9bf048;
+      transform: scale(1.18);
+    }
+
+    /* Protective text mask container so connector routes cleanly around it */
+    .flow-text-content {
+      position: relative;
+      z-index: 3;
+      padding: 4px 10px;
+      max-width: 270px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .flow-step-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-pure);
+      margin-bottom: 8px;
+    }
+
+    .flow-step-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .flow-connector-path.active-path,
+      .flow-connector-path.glow-path {
+        stroke-dashoffset: 0 !important;
+        stroke-dasharray: none !important;
+      }
+      .flow-connector-head {
+        display: none !important;
+      }
+      .flow-step-card .flow-step-img,
+      .flow-step-card .flow-step-badge {
+        transition: none !important;
+        animation: none !important;
+      }
+      .flow-step-card .flow-step-img {
+        border-color: #8fe53e !important;
+      }
+    }
+
+    .flow-disclaimer-box {
+      margin-top: 24px;
+      text-align: center;
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px dashed var(--border-subtle);
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    /* ==========================================================================
+       SECTION 5: WHAT PRODUCTS CAN YOU SELL?
+       ========================================================================== */
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .catalog-card {
+      background: linear-gradient(145deg, rgba(18, 24, 20, 0.85) 0%, rgba(11, 15, 12, 0.95) 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 24px 22px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      backdrop-filter: blur(8px);
+    }
+
+    .catalog-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gls-green), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .catalog-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 24px var(--gls-green-glow);
+      background: linear-gradient(145deg, rgba(23, 33, 26, 0.92) 0%, rgba(14, 20, 16, 0.98) 100%);
+    }
+
+    .catalog-card:hover::before {
+      opacity: 1;
+    }
+
+    .catalog-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .catalog-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold-accent);
+      background: rgba(201, 168, 106, 0.1);
+      border: 1px solid rgba(201, 168, 106, 0.22);
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .catalog-num {
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--text-dim);
+      letter-spacing: 0.05em;
+    }
+
+    .catalog-card-body {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .catalog-icon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      background: rgba(116, 183, 46, 0.08);
+      border: 1px solid rgba(116, 183, 46, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gls-green);
+      transition: all 0.3s ease;
+    }
+
+    .catalog-card:hover .catalog-icon {
+      background: var(--gls-green);
+      color: #060807;
+      box-shadow: 0 0 16px var(--gls-green-glow);
+      transform: scale(1.05);
+    }
+
+    .catalog-name {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-pure);
+      line-height: 1.3;
+      margin: 0;
+    }
+
+    /* ==========================================================================
+       SECTION 6: WHAT MAKES THE GLS MODEL RELEVANT?
+       ========================================================================== */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .pillar-box {
+      background: var(--bg-dark-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 32px 28px;
+    }
+
+    .pillar-pill {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--gls-green);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+      display: inline-block;
+    }
+
+    .pillar-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-pure);
+      margin-bottom: 12px;
+    }
+
+    .pillar-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    .moq-banner {
+      margin-top: 36px;
+      background: linear-gradient(90deg, rgba(116, 183, 46, 0.1), rgba(201, 168, 106, 0.1));
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-md);
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .moq-banner-title {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text-pure);
+    }
+
+    .moq-banner-subtitle {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       SECTION 7: MEET THE FOUNDERS
+       ========================================================================== */
+    .founder-editorial-card {
+      background: var(--bg-dark-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      box-shadow: var(--shadow-card);
+    }
+
+    .founder-image-container {
+      background: #020302;
+      position: relative;
+      overflow: hidden;
+      min-height: 480px;
+    }
+
+    .founder-image-container video,
+    .founder-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 8%;
+      display: block;
+    }
+
+    .founder-content-body {
+      padding: 56px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .founder-designation {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold-accent);
+      margin-bottom: 8px;
+    }
+
+    .founder-fullname {
+      font-family: var(--font-heading);
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--text-pure);
+      margin-bottom: 20px;
+    }
+
+    .founder-quote-text {
+      font-family: var(--font-quote);
+      font-style: italic;
+      font-size: 1.25rem;
+      color: #E2E8E4;
+      line-height: 1.5;
+      margin-bottom: 24px;
+      padding-left: 20px;
+      border-left: 3px solid var(--gls-green);
+    }
+
+    .founder-bio-text {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+
+    /* ==========================================================================
+       SECTION 8: WHO SHOULD ATTEND?
+       ========================================================================== */
+    .persona-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .persona-card {
+      background: var(--bg-dark-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .persona-check {
+      color: var(--gls-green);
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin-bottom: 14px;
+    }
+
+    .persona-name {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-pure);
+      margin-bottom: 10px;
+    }
+
+    .persona-desc {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    /* ==========================================================================
+       SECTION 9: WHAT ATTENDEES WILL DISCOVER
+       ========================================================================== */
+    .curriculum-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .curriculum-card {
+      background: var(--bg-dark-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 32px 28px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .module-badge {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--gls-green);
+      background: rgba(116, 183, 46, 0.1);
+      border: 1px solid var(--border-accent);
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .module-heading {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-pure);
+      margin-bottom: 8px;
+    }
+
+    .module-text {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       SECTION 10: FREQUENTLY ASKED QUESTIONS
+       ========================================================================== */
+    .faq-wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .faq-node {
+      background: var(--bg-dark-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: border-color 0.2s ease;
+    }
+
+    .faq-node.active {
+      border-color: var(--border-accent);
+    }
+
+    .faq-trigger {
+      width: 100%;
+      text-align: left;
+      padding: 22px 24px;
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-pure);
+    }
+
+    .faq-icon {
+      font-size: 1.4rem;
+      color: var(--gls-green);
+      transition: transform 0.25s ease;
+      line-height: 1;
+    }
+
+    .faq-node.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-drawer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0 24px;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .faq-node.active .faq-drawer {
+      max-height: 250px;
+      padding-bottom: 22px;
+    }
+
+    /* ==========================================================================
+       SECTION 11: FINAL REGISTRATION CTA & FORM
+       ========================================================================== */
+    .registration-box-section {
+      background: radial-gradient(circle at 50% 50%, rgba(116, 183, 46, 0.12) 0%, transparent 70%), var(--bg-dark-surface);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .reg-form-shell {
+      max-width: 780px;
+      margin: 0 auto;
+      background: var(--bg-dark-card);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      box-shadow: var(--shadow-card), var(--shadow-glow);
+    }
+
+    .reg-form-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .reg-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .grid-span-2 {
+      grid-column: span 2;
+    }
+
+    .field-group {
+      position: relative;
+    }
+
+    .field-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #E2E8E4;
+      margin-bottom: 8px;
+    }
+
+    .field-label-left {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .field-icon {
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    .field-title {
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .req-star {
+      color: #ff3b30;
+      font-weight: 800;
+      font-size: 1.05rem;
+      margin-left: 2px;
+      text-shadow: 0 0 8px rgba(255, 59, 48, 0.45);
+      line-height: 1;
+    }
+
+    .field-badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: rgba(116, 183, 46, 0.12);
+      border: 1px solid rgba(116, 183, 46, 0.28);
+      color: #9bf048;
+    }
+
+    .field-badge.optional {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.12);
+      color: var(--text-dim);
+    }
+
+    .field-input, .field-select {
+      width: 100%;
+      background: linear-gradient(180deg, rgba(14, 22, 16, 0.95) 0%, rgba(7, 12, 9, 0.98) 100%);
+      border: 1px solid rgba(116, 183, 46, 0.28);
+      border-radius: 12px;
+      padding: 14px 16px;
+      color: #ffffff;
+      font-size: 0.96rem;
+      font-family: inherit;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .field-input::placeholder {
+      color: rgba(141, 162, 146, 0.55);
+      font-style: italic;
+      font-size: 0.92rem;
+    }
+
+    .field-input:focus, .field-select:focus {
+      outline: none;
+      border-color: #7EBE32;
+      background: rgba(18, 30, 20, 0.98);
+      box-shadow: 0 0 0 3px rgba(116, 183, 46, 0.22), 0 0 18px rgba(116, 183, 46, 0.18), inset 0 1px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    .input-with-prefix {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-prefix-flag {
+      position: absolute;
+      left: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #bbf781;
+      padding-right: 10px;
+      border-right: 1px solid rgba(116, 183, 46, 0.35);
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    .field-input.has-prefix {
+      padding-left: 86px;
+    }
+
+    /* Creative Privacy Trust Card */
+    .form-trust-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(116, 183, 46, 0.07);
+      border: 1px solid rgba(116, 183, 46, 0.22);
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin-top: 18px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    }
+
+    .trust-shield-icon {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(116, 183, 46, 0.15);
+      border: 1px solid rgba(116, 183, 46, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .trust-text {
+      font-size: 0.78rem;
+      line-height: 1.45;
+      color: #b0c4b5;
+    }
+
+    .trust-text strong {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    /* Creative Consent Checkbox Line */
+    .consent-line {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-top: 16px;
+      cursor: pointer;
+      padding: 10px 12px;
+      border-radius: 10px;
+      transition: background 0.2s ease;
+    }
+
+    .consent-line:hover {
+      background: rgba(116, 183, 46, 0.05);
+    }
+
+    .consent-line input {
+      accent-color: var(--gls-green);
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    .consent-text {
+      color: var(--text-muted);
+      font-size: 0.84rem;
+      line-height: 1.45;
+    }
+
+    .consent-highlight {
+      color: #9bf048;
+      font-weight: 700;
+    }
+
+    /* Creative Submit Button Shell */
+    .btn-submit-creative {
+      width: 100%;
+      margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 20px;
+      gap: 3px;
+      border-radius: 100px;
+      background: linear-gradient(135deg, #8fe53e 0%, #74B72E 60%, #5e9c22 100%);
+      color: #060807;
+      box-shadow: 0 8px 24px rgba(116, 183, 46, 0.35), 0 0 15px rgba(116, 183, 46, 0.18);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-submit-creative:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 30px rgba(116, 183, 46, 0.45), 0 0 25px rgba(116, 183, 46, 0.25);
+      filter: brightness(1.05);
+    }
+
+    .btn-submit-creative:active {
+      transform: translateY(1px);
+      box-shadow: 0 4px 14px rgba(116, 183, 46, 0.3);
+    }
+
+    .btn-main-label {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      line-height: 1.2;
+    }
+
+    .btn-sub-note {
+      font-size: 0.68rem;
+      font-weight: 700;
+      opacity: 0.92;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      line-height: 1.2;
+    }
+
+    .form-urgency-note {
+      text-align: center;
+      margin: 12px auto 0;
+      font-size: 0.8rem;
+      line-height: 1.45;
+      color: #9eb5a4;
+      padding: 0 4px;
+      max-width: 420px;
+    }
+
+    .urgency-live-dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #74B72E;
+      box-shadow: 0 0 8px #74B72E;
+      vertical-align: middle;
+      margin-right: 6px;
+      margin-top: -2px;
+      animation: regLivePulse 1.8s infinite ease-in-out;
+    }
+
+    .urgency-text {
+      display: inline;
+      vertical-align: middle;
+    }
+
+    .urgency-label {
+      color: #bbf781;
+      font-weight: 700;
+    }
+
+    .form-urgency-note strong {
+      color: #bbf781;
+    }
+
+    .form-alert-box {
+      display: none;
+      padding: 16px;
+      border-radius: var(--radius-sm);
+      margin-top: 20px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .form-alert-box.success {
+      display: block;
+      background: rgba(116, 183, 46, 0.15);
+      border: 1px solid var(--gls-green);
+      color: #97e848;
+    }
+
+    /* ==========================================================================
+       SECTION 12: FOOTER
+       ========================================================================== */
+    footer.site-footer {
+      background: var(--bg-dark-base);
+      padding: 50px 0;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .footer-content-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer-links-row {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links-row a:hover {
+      color: var(--gls-green);
+    }
+
+    /* Sticky Mobile CTA */
+    .mobile-sticky-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(6, 8, 7, 0.95);
+      backdrop-filter: blur(12px);
+      padding: 12px 18px;
+      border-top: 1px solid var(--border-subtle);
+      z-index: 999;
+    }
+
+    .mobile-sticky-bar .btn-cta {
+      width: 100%;
+      padding: 14px;
+      font-size: 0.95rem;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE ADAPTATIONS
+       ========================================================================== */
+    @media (max-width: 992px) {
+      .hero-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .hero-content {
+        display: contents;
+      }
+      .hero-tag { order: 1; margin: 0 auto; }
+      .hero-headline { order: 2; margin: 0; text-align: center; }
+      .hero-media { order: 3; width: 100%; }
+      .hero-subhead { order: 4; margin: 0; text-align: center; }
+      .hero-event-bar { order: 5; width: 100%; margin: 0; justify-content: center; }
+      .event-info-item { align-items: center; text-align: center; }
+      .hero-cta-wrapper { order: 6; text-align: center; }
+      .opp-visual-panel {
+        grid-template-columns: 1fr;
+      }
+      .challenges-grid, .persona-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .flow-steps-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .flow-step-card::after {
+        display: none !important;
+      }
+      .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .pillars-grid {
+        grid-template-columns: 1fr;
+      }
+      .founder-editorial-card {
+        grid-template-columns: 1fr;
+      }
+      .founder-image-container {
+        aspect-ratio: 4 / 5;
+        max-height: 540px;
+        min-height: unset;
+      }
+      .curriculum-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        padding-bottom: 16px !important;
+      }
+      .section-py {
+        padding: 16px 0 !important;
+      }
+      .section-header {
+        margin-bottom: 16px !important;
+      }
+      .hero-headline {
+        font-size: 2.2rem;
+      }
+      .catalog-grid, .challenges-grid, .flow-steps-grid, .persona-grid {
+        grid-template-columns: 1fr;
+      }
+      .flow-steps-grid {
+        gap: 36px;
+      }
+      .flow-text-content {
+        max-width: 250px;
+      }
+      .reg-form-grid {
+        grid-template-columns: 1fr;
+      }
+      .grid-span-2 {
+        grid-column: span 1;
+      }
+      .founder-btn-wrapper .btn-cta {
+        width: 100%;
+        margin-top: 12px;
+      }
+      .founder-image-container {
+        aspect-ratio: 4 / 5;
+        max-height: 480px;
+        min-height: unset;
+      }
+      .founder-image-container img {
+        object-position: center 6%;
+      }
+      .founder-content-body {
+        padding: 32px 20px;
+      }
+      .reg-form-shell {
+        padding: 28px 16px;
+      }
+      .reg-form-header {
+        margin-bottom: 24px;
+      }
+      .reg-headline {
+        font-size: clamp(1.65rem, 5vw, 2.1rem) !important;
+        line-height: 1.2 !important;
+        margin-bottom: 10px !important;
+      }
+      .reg-subhead {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 16px !important;
+      }
+      
+      /* Mobile Creative Event Schedule Layout */
+      .reg-event-card {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
+        width: 100%;
+        margin-top: 16px;
+      }
+      .reg-event-card:hover {
+        border-color: transparent;
+        box-shadow: none;
+      }
+      .reg-event-live-pill {
+        align-self: center;
+        padding: 7px 18px;
+        font-size: 0.85rem;
+        background: linear-gradient(135deg, rgba(16, 26, 18, 0.95) 0%, rgba(10, 16, 12, 0.98) 100%);
+        border: 1px solid rgba(116, 183, 46, 0.38);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3), 0 0 16px rgba(116, 183, 46, 0.15);
+      }
+      .reg-event-schedule-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+      }
+      .reg-schedule-tile-divider {
+        display: none;
+      }
+      .reg-schedule-tile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+        padding: 12px 6px;
+        background: rgba(116, 183, 46, 0.08);
+        border: 1px solid rgba(116, 183, 46, 0.28);
+        border-radius: 12px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+        min-width: 0;
+      }
+      .reg-tile-header {
+        justify-content: center;
+        gap: 5px;
+      }
+      .reg-tile-emoji {
+        font-size: 1.1rem;
+      }
+      .reg-tile-label {
+        display: inline-block;
+        font-size: 0.65rem;
+        letter-spacing: 0.08em;
+      }
+      .reg-tile-val {
+        font-size: clamp(0.92rem, 3.4vw, 1.05rem);
+        line-height: 1.25;
+        white-space: normal;
+        word-break: normal;
+      }
+      .btn-submit-creative {
+        padding: 11px 16px !important;
+        margin-top: 14px !important;
+        gap: 2px !important;
+        border-radius: 100px !important;
+        box-shadow: 0 6px 18px rgba(116, 183, 46, 0.35) !important;
+      }
+      .btn-main-label {
+        font-size: clamp(0.86rem, 3.8vw, 0.98rem) !important;
+        letter-spacing: 0.01em !important;
+        white-space: nowrap !important;
+      }
+      .btn-sub-note {
+        font-size: clamp(0.62rem, 2.6vw, 0.68rem) !important;
+        letter-spacing: 0.01em !important;
+        white-space: nowrap !important;
+      }
+      .form-urgency-note {
+        font-size: 0.76rem !important;
+        line-height: 1.4 !important;
+        margin-top: 10px !important;
+        text-align: center !important;
+        padding: 0 4px !important;
+      }
+      .urgency-live-dot {
+        width: 6px !important;
+        height: 6px !important;
+        margin-right: 5px !important;
+        margin-top: -2px !important;
+      }
+      .mobile-sticky-bar {
+        display: block;
+      }
+      body {
+        padding-bottom: 70px;
+      }
+      .header-meta .header-pill {
+        display: none;
+      }
+      .header-meta .btn-cta {
+        display: none; /* Redundant due to sticky bar */
+      }
+      .site-header img {
+        height: 36px !important;
+      }
+      .hero-event-bar {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 12px;
+        padding: 14px 12px;
+        margin-bottom: 24px;
+        border-color: rgba(116, 183, 46, 0.35);
+        background: linear-gradient(180deg, rgba(16, 25, 18, 0.95) 0%, rgba(9, 14, 11, 0.98) 100%);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 25px rgba(116, 183, 46, 0.12);
+      }
+      .event-schedule-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+      }
+      .event-schedule-divider {
+        display: none;
+      }
+      .event-info-item {
+        align-items: center;
+        text-align: center;
+        padding: 10px 6px;
+        background: rgba(116, 183, 46, 0.08);
+        border: 1px solid rgba(116, 183, 46, 0.28);
+        border-radius: 12px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+      }
+      .event-info-header {
+        justify-content: center;
+        gap: 5px;
+      }
+      .event-info-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.08em;
+      }
+      .event-info-value {
+        font-size: 1.15rem;
+        color: #9bf048;
+        text-shadow: 0 0 15px rgba(116, 183, 46, 0.5);
+        white-space: normal;
+        word-break: normal;
+        line-height: 1.25;
+      }
+      .countdown-cluster {
+        margin-left: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+      }
+      .timer-slot {
+        min-width: 0;
+        width: 100%;
+        padding: 10px 4px;
+      }
+      .timer-slot .digits {
+        font-size: 1.45rem;
+      }
+      .timer-slot .unit {
+        font-size: 0.62rem;
+      }
+      .opp-visual-panel {
+        padding: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        gap: 32px;
+      }
+      .opp-visual-preview {
+        padding: 0;
+        background: transparent;
+        border: none;
+      }
+      .bridge-item {
+        padding: 12px;
+      }
+      .section-py {
+        padding: 60px 0;
+      }
+      .moq-banner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .curriculum-card {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+    .founder-placeholder {min-height:360px;height:100%;display:grid;place-items:center;text-align:center;background:linear-gradient(145deg,#101d12,#050806);color:#a3b1a7;font-family:var(--font-heading);font-size:1.4rem;padding:30px}
+    .founder-placeholder small {font-size:.85rem;font-weight:400}
+    .hero-video-box video {aspect-ratio:1/1;height:auto;object-fit:contain}
+    .form-alert-box.error {display:block;background:rgba(255,90,90,.12);border:1px solid #e57373;color:#ffaaaa}
+    .consent-line {display:flex;gap:10px;align-items:flex-start;color:var(--text-muted);font-size:.83rem;margin-top:18px}
+    .consent-line input {accent-color:var(--gls-green);margin-top:5px}
+    .unmute-overlay-btn {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: rgba(11, 15, 12, 0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--gls-green);
+      border-radius: var(--radius-pill);
+      padding: 10px 18px;
+      color: var(--text-pure);
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 10;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      transition: all 0.2s ease;
+    }
+    .unmute-overlay-btn:hover {
+      background: var(--gls-green);
+      color: #050806;
+    }
+    .unmute-overlay-btn.hidden {
+      display: none;
+    }
+
+    /* WhatsApp Success Modal & Channel Redirect */
+    .wa-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(6, 8, 7, 0.88);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 99999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    .wa-modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .wa-modal-box {
+      background: #0f1611;
+      border: 1px solid rgba(116, 183, 46, 0.4);
+      border-radius: 20px;
+      padding: 36px 28px;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 35px rgba(116, 183, 46, 0.2);
+      transform: scale(0.95);
+      transition: transform 0.25s ease;
+    }
+    .wa-modal-overlay.active .wa-modal-box {
+      transform: scale(1);
+    }
+    .wa-modal-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      background: rgba(37, 211, 102, 0.15);
+      border: 1px solid rgba(37, 211, 102, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #25D366;
+    }
+    .wa-success-badge {
+      display: inline-block;
+      padding: 5px 14px;
+      background: rgba(37, 211, 102, 0.12);
+      border: 1px solid rgba(37, 211, 102, 0.35);
+      border-radius: var(--radius-pill);
+      color: #25D366;
+      font-size: 0.84rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: 0.3px;
+    }
+    .wa-modal-title {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+    .wa-modal-schedule {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 8px 14px;
+      margin: 12px 0 16px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      font-size: 0.88rem;
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .wa-schedule-divider {
+      color: var(--gls-green);
+      font-weight: 800;
+    }
+    .wa-modal-subtitle {
+      color: #a3b1a7;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      margin-bottom: 22px;
+    }
+    .wa-btn-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 14px 18px;
+      background: #25D366;
+      color: #060807;
+      font-family: var(--font-heading);
+      font-size: 0.98rem;
+      font-weight: 800;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+      transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      box-sizing: border-box;
+      line-height: 1.25;
+    }
+    .wa-btn-cta:hover {
+      background: #20bd5a;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+    }
+    .wa-btn-icon-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .wa-btn-icon-wrap svg {
+      width: 22px;
+      height: 22px;
+      display: block;
+    }
+    .wa-btn-label {
+      white-space: nowrap;
+      letter-spacing: -0.2px;
+    }
+    .wa-btn-arrow {
+      font-size: 1.15rem;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+    .wa-btn-cta:hover .wa-btn-arrow,
+    .wa-persistent-btn:hover .wa-btn-arrow {
+      transform: translateX(3px);
+    }
+    .wa-countdown-notice {
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: #a3b1a7;
+      text-align: center;
+      background: rgba(37, 211, 102, 0.08);
+      border: 1px solid rgba(37, 211, 102, 0.22);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+    }
+    .wa-countdown-notice strong {
+      color: #25D366;
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin: 0 4px;
+    }
+    .wa-close-btn {
+      background: transparent;
+      border: none;
+      color: #6b7a70;
+      font-size: 0.85rem;
+      margin-top: 16px;
+      cursor: pointer;
+      text-decoration: underline;
+      display: inline-block;
+    }
+    .wa-close-btn:hover {
+      color: #a3b1a7;
+    }
+    /* Persistent Confirmation Card on Page */
+    .reg-persistent-card {
+      background: linear-gradient(180deg, #0f1611 0%, #080c09 100%);
+      border: 1px solid rgba(37, 211, 102, 0.35);
+      border-radius: 20px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(37, 211, 102, 0.12);
+      margin-top: 20px;
+    }
+    .reg-persistent-badge {
+      display: inline-block;
+      padding: 5px 14px;
+      background: rgba(37, 211, 102, 0.15);
+      border: 1px solid rgba(37, 211, 102, 0.35);
+      border-radius: 9999px;
+      color: #25D366;
+      font-size: 0.82rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .reg-persistent-title {
+      font-family: var(--font-heading);
+      color: #ffffff;
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin: 0 0 12px;
+      line-height: 1.35;
+    }
+    .reg-persistent-schedule {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 7px 16px;
+      font-size: 0.88rem;
+      color: #ffffff;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .reg-persistent-dot {
+      color: var(--gls-green);
+      font-weight: 800;
+    }
+    .reg-persistent-desc {
+      color: #a3b1a7;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      margin: 0 auto 24px;
+      max-width: 480px;
+    }
+    .wa-persistent-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #25D366 !important;
+      color: #060807 !important;
+      font-weight: 800 !important;
+      padding: 14px 24px !important;
+      border-radius: 9999px !important;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35) !important;
+      text-decoration: none !important;
+      font-size: 0.98rem !important;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+    .wa-persistent-btn:hover {
+      background: #20bd5a !important;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 480px) {
+      .wa-modal-overlay {
+        padding: 14px;
+      }
+      .wa-modal-box {
+        padding: 28px 18px 22px;
+        border-radius: 18px;
+        max-width: calc(100vw - 28px);
+      }
+      .wa-modal-icon {
+        width: 52px;
+        height: 52px;
+        margin-bottom: 12px;
+      }
+      .wa-modal-icon svg {
+        width: 28px;
+        height: 28px;
+      }
+      .wa-modal-title {
+        font-size: 1.18rem;
+        line-height: 1.32;
+        margin-bottom: 10px;
+      }
+      .wa-modal-schedule {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        gap: 6px;
+        margin-bottom: 12px;
+      }
+      .wa-modal-subtitle {
+        font-size: 0.85rem;
+        line-height: 1.45;
+        margin-bottom: 18px;
+      }
+      .wa-btn-cta,
+      .wa-persistent-btn {
+        padding: 13px 10px !important;
+        font-size: clamp(0.82rem, 3.7vw, 0.92rem) !important;
+        gap: 6px !important;
+        width: 100% !important;
+      }
+      .wa-btn-icon-wrap svg {
+        width: 19px !important;
+        height: 19px !important;
+      }
+      .wa-btn-label {
+        font-size: clamp(0.82rem, 3.7vw, 0.92rem);
+        white-space: nowrap;
+      }
+      .wa-btn-arrow {
+        font-size: 1.05rem;
+      }
+      .wa-countdown-notice {
+        margin-top: 14px;
+        padding: 8px 12px;
+        font-size: 0.82rem;
+      }
+      .wa-countdown-notice strong {
+        font-size: 1.1rem;
+      }
+      .reg-persistent-card {
+        padding: 24px 16px;
+      }
+      .reg-persistent-title {
+        font-size: 1.15rem;
+      }
+      .reg-persistent-schedule {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Real-Time Notification -->
+  <div class="top-notification">
+    🚀 UPCOMING WEBINAR • <strong>1 NOVEMBER 2026</strong> • <span style="color: var(--gls-green); font-weight: 700;">12:00 PM IST</span> • FOR E-COMMERCE BUSINESS OWNERS
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="https://www.gomzilifesciences.in/aboutUs" target="_blank" rel="noopener" aria-label="Gomzi Life Sciences Home">
+        <img src="/gls-logo.webp" alt="Gomzi Life Sciences Logo" style="height: 48px; width: auto; display: block;">
+      </a>
+
+      <div class="header-meta">
+        <span class="header-pill">Supplement Dropshipping</span>
+        <a href="#register" class="btn-cta" style="padding: 10px 22px; font-size: 0.85rem;">Reserve Spot →</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SECTION 1: HERO SECTION WITH INTRODUCTION VIDEO
+       ========================================================================== -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="live-dot"></span>
+          FREE LIVE WEBINAR
+        </div>
+        
+        <h1 class="hero-headline">
+          Build Your Own Supplement Brand <span class="highlight">with Dropshipping</span>
+        </h1>
+        
+        <p class="hero-subhead">
+          Discover how e-commerce business owners can sell their own branded supplements online while Gomzi Life Sciences supports the manufacturing, batch packing, and fulfillment side.
+        </p>
+
+        <!-- Live Date, Time & IST Countdown -->
+        <div class="hero-event-bar">
+          <div class="event-schedule-group">
+            <div class="event-info-item event-date-card">
+              <div class="event-info-header">
+                <svg class="event-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span class="event-info-label">Webinar Date</span>
+              </div>
+              <span class="event-info-value">1 November 2026</span>
+            </div>
+
+            <div class="event-schedule-divider" aria-hidden="true"></div>
+
+            <div class="event-info-item event-time-card">
+              <div class="event-info-header">
+                <svg class="event-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span class="event-info-label">Time (IST)</span>
+              </div>
+              <span class="event-info-value">12:00 PM IST</span>
+            </div>
+          </div>
+          
+          <div class="countdown-cluster" id="heroCountdown">
+            <div class="timer-slot"><span class="digits" id="c-days">00</span><span class="unit">Days</span></div>
+            <div class="timer-slot"><span class="digits" id="c-hours">00</span><span class="unit">Hours</span></div>
+            <div class="timer-slot"><span class="digits" id="c-mins">00</span><span class="unit">Mins</span></div>
+            <div class="timer-slot"><span class="digits" id="c-secs">00</span><span class="unit">Secs</span></div>
+          </div>
+        </div>
+
+        <div class="hero-cta-wrapper">
+          <a href="#register" class="btn-cta">REGISTER FOR FREE →</a>
+          <div class="hero-reassurance">
+            🛡️ For e-commerce business owners and aspiring supplement brand founders.
+          </div>
+        </div>
+      </div>
+
+      <!-- Embedded Video Player -->
+      <div class="hero-media">
+        <div class="hero-video-box" style="position: relative;">
+          <video id="heroVideo" controls playsinline muted preload="none">
+            <!-- Uses optimized Cloudinary streaming video URL -->
+            <source src="https://res.cloudinary.com/wycpodzl/video/upload/f_auto,q_auto/v1791982082/lp-vd-sir_dgjymv.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <button id="unmuteBtn" class="unmute-overlay-btn">🔊 Tap to Unmute</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: INTRODUCE THE GLS DROPSHIPPING MODEL
+       ========================================================================== -->
+  <section class="section-py" style="background: var(--bg-dark-surface);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">The 5-Step Sequence</span>
+        <h2 class="section-title">Your Brand. Your Store. Our Manufacturing.</h2>
+        <p class="section-desc">How order flow operates from your digital checkout to customer fulfillment under agreed arrangements.</p>
+      </div>
+
+      <div class="flow-steps-grid">
+        <!-- Scroll-Driven S-Shaped Connector SVG Layer -->
+        <svg class="flow-connector-svg" aria-hidden="true">
+          <defs>
+            <filter id="glsCurveGlow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+            <radialGradient id="glsHeadGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+              <stop offset="35%" stop-color="#bbf781" stop-opacity="0.95" />
+              <stop offset="70%" stop-color="#74B72E" stop-opacity="0.5" />
+              <stop offset="100%" stop-color="#74B72E" stop-opacity="0" />
+            </radialGradient>
+            <filter id="glsHeadFilter" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="glow" />
+              <feMerge>
+                <feMergeNode in="glow" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+
+          <!-- 4 S-Shaped Segment Groups -->
+          <g class="connector-segment-group" data-seg="0">
+            <path class="flow-connector-path base-path" d="" />
+            <path class="flow-connector-path glow-path" d="" filter="url(#glsCurveGlow)" />
+            <path class="flow-connector-path active-path" d="" />
+          </g>
+          <g class="connector-segment-group" data-seg="1">
+            <path class="flow-connector-path base-path" d="" />
+            <path class="flow-connector-path glow-path" d="" filter="url(#glsCurveGlow)" />
+            <path class="flow-connector-path active-path" d="" />
+          </g>
+          <g class="connector-segment-group" data-seg="2">
+            <path class="flow-connector-path base-path" d="" />
+            <path class="flow-connector-path glow-path" d="" filter="url(#glsCurveGlow)" />
+            <path class="flow-connector-path active-path" d="" />
+          </g>
+          <g class="connector-segment-group" data-seg="3">
+            <path class="flow-connector-path base-path" d="" />
+            <path class="flow-connector-path glow-path" d="" filter="url(#glsCurveGlow)" />
+            <path class="flow-connector-path active-path" d="" />
+          </g>
+
+          <!-- Moving Leading-Edge Light Bead -->
+          <circle class="flow-connector-head" r="6" cx="-100" cy="-100" fill="url(#glsHeadGlow)" />
+        </svg>
+
+        <div class="flow-step-card" data-step="1">
+          <div class="flow-img-wrapper">
+            <img src="/order-place.webp" alt="Order Placed" class="flow-step-img">
+            <div class="flow-step-badge">01</div>
+          </div>
+          <div class="flow-text-content">
+            <h3 class="flow-step-title">Customer Places an Order</h3>
+            <p class="flow-step-desc">Order received through your online store or marketplace.</p>
+          </div>
+        </div>
+
+        <div class="flow-step-card" data-step="2">
+          <div class="flow-img-wrapper">
+            <img src="/order-recieved.webp" alt="Order Received" class="flow-step-img">
+            <div class="flow-step-badge">02</div>
+          </div>
+          <div class="flow-text-content">
+            <h3 class="flow-step-title">Order Is Received</h3>
+            <p class="flow-step-desc">Order details are shared with Gomzi Life Sciences as per the agreed process.</p>
+          </div>
+        </div>
+
+        <div class="flow-step-card" data-step="3">
+          <div class="flow-img-wrapper">
+            <img src="/manufacturing.webp" alt="Manufacturing & Packs" class="flow-step-img">
+            <div class="flow-step-badge">03</div>
+          </div>
+          <div class="flow-text-content">
+            <h3 class="flow-step-title">GLS Manufactures & Packs</h3>
+            <p class="flow-step-desc">Our team prepares, fills and packs your branded supplements as per the agreed specifications.</p>
+          </div>
+        </div>
+
+        <div class="flow-step-card" data-step="4">
+          <div class="flow-img-wrapper">
+            <img src="/quality-checking.webp" alt="Quality Check" class="flow-step-img">
+            <div class="flow-step-badge">04</div>
+          </div>
+          <div class="flow-text-content">
+            <h3 class="flow-step-title">Quality Check & Labelling</h3>
+            <p class="flow-step-desc">Each batch is quality checked and packed with your brand labelling and packaging.</p>
+          </div>
+        </div>
+
+        <div class="flow-step-card" data-step="5">
+          <div class="flow-img-wrapper">
+            <img src="/dispatch.webp" alt="Dispatch & Delivery" class="flow-step-img">
+            <div class="flow-step-badge">05</div>
+          </div>
+          <div class="flow-text-content">
+            <h3 class="flow-step-title">Dispatch & Delivery</h3>
+            <p class="flow-step-desc">Products are dispatched through the agreed fulfilment arrangement to your customers.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-disclaimer-box">
+        Note: Exact fulfillment and shipping arrangements depend on the agreed operating model chosen for your brand.
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ==========================================================================
+       SECTION 3: THE CHALLENGES OF TRADITIONAL MANUFACTURING
+       ========================================================================== -->
+  <section class="section-py">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Operational Bottlenecks</span>
+        <h2 class="section-title">Starting a Supplement Brand Can Feel Complicated.</h2>
+        <p class="section-desc">Conventional third-party manufacturing models were built for giant pharmaceutical distributors, not agile e-commerce operators.</p>
+      </div>
+
+      <div class="challenges-grid">
+        <div class="challenge-card">
+          <div class="challenge-card-header">
+            <span class="challenge-cross">✕ High Upfront Capital</span>
+            <span class="challenge-num">01</span>
+          </div>
+          <div class="challenge-card-body">
+            <div class="challenge-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="6" width="20" height="12" rx="2"/>
+                <circle cx="12" cy="12" r="2"/>
+                <path d="M6 12h.01M18 12h.01"/>
+              </svg>
+            </div>
+            <h3 class="challenge-title">Bulk Inventory Lockup</h3>
+          </div>
+        </div>
+
+        <div class="challenge-card">
+          <div class="challenge-card-header">
+            <span class="challenge-cross">✕ Space & Handling</span>
+            <span class="challenge-num">02</span>
+          </div>
+          <div class="challenge-card-body">
+            <div class="challenge-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
+            </div>
+            <h3 class="challenge-title">Warehouse Management</h3>
+          </div>
+        </div>
+
+        <div class="challenge-card">
+          <div class="challenge-card-header">
+            <span class="challenge-cross">✕ Complex Production</span>
+            <span class="challenge-num">03</span>
+          </div>
+          <div class="challenge-card-body">
+            <div class="challenge-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <h3 class="challenge-title">Packaging & Labeling</h3>
+          </div>
+        </div>
+
+        <div class="challenge-card">
+          <div class="challenge-card-header">
+            <span class="challenge-cross">✕ Dispatch Drag</span>
+            <span class="challenge-num">04</span>
+          </div>
+          <div class="challenge-card-body">
+            <div class="challenge-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"/>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                <circle cx="5.5" cy="18.5" r="2.5"/>
+                <circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
+            </div>
+            <h3 class="challenge-title">Packing & Logistics</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="challenge-bridge-note">
+        ↓ Working with the right manufacturing partner simplifies the operational side completely.
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ==========================================================================
+       SECTION 5: WHAT PRODUCTS CAN YOU SELL?
+       ========================================================================== -->
+  <section class="section-py">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Available Categories</span>
+        <h2 class="section-title">Build Your Own Supplement Product Line.</h2>
+        <p class="section-desc">Explore categories offered by GLS to power your brand portfolio with clean, lab-tested formulations.</p>
+      </div>
+
+      <div class="catalog-grid">
+        <div class="catalog-card">
+          <div class="catalog-card-header">
+            <span class="catalog-tag">Core Nutrition</span>
+            <span class="catalog-num">01</span>
+          </div>
+          <div class="catalog-card-body">
+            <div class="catalog-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2h12v4H6z"/><path d="M7 6v14a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V6"/><line x1="10" y1="11" x2="14" y2="11"/><line x1="10" y1="15" x2="14" y2="15"/>
+              </svg>
+            </div>
+            <h3 class="catalog-name">100% Whey Protein</h3>
+          </div>
+        </div>
+
+        <div class="catalog-card">
+          <div class="catalog-card-header">
+            <span class="catalog-tag">Ultra Filtered</span>
+            <span class="catalog-num">02</span>
+          </div>
+          <div class="catalog-card-body">
+            <div class="catalog-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+              </svg>
+            </div>
+            <h3 class="catalog-name">Whey Isolate & Blends</h3>
+          </div>
+        </div>
+
+        <div class="catalog-card">
+          <div class="catalog-card-header">
+            <span class="catalog-tag">Power & Strength</span>
+            <span class="catalog-num">03</span>
+          </div>
+          <div class="catalog-card-body">
+            <div class="catalog-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <h3 class="catalog-name">Micronized Creatine</h3>
+          </div>
+        </div>
+
+        <div class="catalog-card">
+          <div class="catalog-card-header">
+            <span class="catalog-tag">Intra-Workout</span>
+            <span class="catalog-num">04</span>
+          </div>
+          <div class="catalog-card-body">
+            <div class="catalog-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+              </svg>
+            </div>
+            <h3 class="catalog-name">BCAA & EAA Matrices</h3>
+          </div>
+        </div>
+
+        <div class="catalog-card">
+          <div class="catalog-card-header">
+            <span class="catalog-tag">Energy & Focus</span>
+            <span class="catalog-num">05</span>
+          </div>
+          <div class="catalog-card-body">
+            <div class="catalog-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3 class="catalog-name">Pre-Workout Formulations</h3>
+          </div>
+        </div>
+
+        <div class="catalog-card">
+          <div class="catalog-card-header">
+            <span class="catalog-tag">Wellness</span>
+            <span class="catalog-num">06</span>
+          </div>
+          <div class="catalog-card-body">
+            <div class="catalog-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="catalog-name">Nutraceutical Range</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 7: MEET THE FOUNDERS
+       ========================================================================== -->
+  <section class="section-py">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Manufacturing Leadership</span>
+        <h2 class="section-title">Meet the People Behind Gomzi Life Sciences.</h2>
+        <p class="section-desc">Bridging the gap between heavy pharmaceutical production and digital-first e-commerce entrepreneurs.</p>
+      </div>
+
+      <div class="founder-editorial-card">
+        <div class="founder-image-container">
+          <!-- Features Founder photograph provided -->
+          <img src="/g-sir.webp" alt="Dr. Gautam Jani - Founder & Director, Gomzi Life Sciences" loading="lazy">
+        </div>
+        <div class="founder-content-body">
+          <div class="founder-designation">Founder & Director</div>
+          <h3 class="founder-fullname">Dr. Gautam Jani</h3>
+          <blockquote class="founder-quote-text">
+            “Starting a supplement brand used to mean heavy upfront inventory, endless factory visits, and lakhs of rupees locked away. We created our dropshipping model to let entrepreneurs build brands without factory headaches.”
+          </blockquote>
+          <p class="founder-bio-text">
+            A recognized fitness industry veteran and director at Gomzi Life Sciences LLP in Surat, Gujarat, Dr. Gautam Jani has guided numerous fitness professionals and entrepreneurs. With GLS, he is dedicated to providing high-grade nutraceutical manufacturing support so emerging e-commerce brands can launch with confidence.
+          </p>
+          <div class="founder-btn-wrapper">
+            <a href="#register" class="btn-cta" style="padding: 12px 28px; font-size: 0.9rem; flex-direction: column; text-align: center;"><span>Meet Dr. Jani</span><span>in the Webinar →</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- ==========================================================================
+       SECTION 10: FREQUENTLY ASKED QUESTIONS
+       ========================================================================== -->
+  <section class="section-py" style="background: var(--bg-dark-surface);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Clear Answers</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">Straightforward answers about our manufacturing dropshipping model and the upcoming webinar.</p>
+      </div>
+
+      <div class="faq-wrapper">
+        <div class="faq-node">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            What is supplement dropshipping?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-drawer">
+            Supplement dropshipping allows an e-commerce brand to sell nutritional products under its own label without holding physical stock in advance. When an end customer buys from your online store, Gomzi Life Sciences supports the manufacturing, packing, and agreed fulfillment workflow.
+          </div>
+        </div>
+
+        <div class="faq-node">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            Who can attend this webinar?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-drawer">
+            The session is open to e-commerce entrepreneurs, Shopify store operators, marketplace sellers, and business founders interested in exploring the supplement and nutraceutical space.
+          </div>
+        </div>
+
+        <div class="faq-node">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            Do I need an existing e-commerce store right now?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-drawer">
+            No, you do not need an active store to attend. The webinar will explain the model for both existing sellers and entrepreneurs currently planning their online launch.
+          </div>
+        </div>
+
+        <div class="faq-node">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            Can I launch my own custom supplement brand?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-drawer">
+            Yes. The core benefit of partnering with Gomzi Life Sciences is private labeling—your customers receive products packaged under your brand identity.
+          </div>
+        </div>
+
+        <div class="faq-node">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            Is there an MOQ for online orders?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-drawer">
+            Under the agreed dropshipping framework for eligible online orders, there is no minimum order quantity (No MOQ on online orders). Full operational details will be outlined in the webinar.
+          </div>
+        </div>
+
+        <div class="faq-node">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            How does the order and delivery process work?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-drawer">
+            Once an order is generated on your store, the details are passed to GLS via the agreed process. The product is manufactured/packed to specification and dispatched via the agreed fulfillment arrangement or your own courier.
+          </div>
+        </div>
+
+        <div class="faq-node">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            How can I register and what happens after registration?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-drawer">
+            Simply complete the short form on this page with your name, email, and WhatsApp number. Your registration will be recorded once the registration service is connected. The organizer will provide joining instructions separately.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 11: FINAL REGISTRATION CTA & FORM
+       ========================================================================== -->
+  <section class="section-py registration-box-section" id="register">
+    <div class="container">
+      <div class="reg-form-shell">
+        <div class="reg-form-header">
+          <span class="section-eyebrow reg-eyebrow">Reserve Your Spot</span>
+          <h2 class="section-title reg-headline">
+            Your Supplement Brand <span class="highlight">Could Start Here.</span>
+          </h2>
+          <p class="section-desc reg-subhead">
+            Discover how the Gomzi Life Sciences dropshipping model can support your e-commerce supplement business.
+          </p>
+
+          <!-- Creatively Adjustable Event Schedule Module -->
+          <div class="reg-event-card">
+            <div class="reg-event-live-pill">
+              <span class="reg-live-pulse-dot" aria-hidden="true"></span>
+              <span class="reg-live-icon">💻</span>
+              <span class="reg-live-title">Free Live Webinar</span>
+            </div>
+
+            <div class="reg-event-schedule-grid">
+              <div class="reg-schedule-tile reg-date-tile">
+                <div class="reg-tile-header">
+                  <span class="reg-tile-emoji">📅</span>
+                  <span class="reg-tile-label">Webinar Date</span>
+                </div>
+                <div class="reg-tile-val">1 November 2026</div>
+              </div>
+
+              <div class="reg-schedule-tile-divider" aria-hidden="true"></div>
+
+              <div class="reg-schedule-tile reg-time-tile">
+                <div class="reg-tile-header">
+                  <span class="reg-tile-emoji">⏰</span>
+                  <span class="reg-tile-label">Time (IST)</span>
+                </div>
+                <div class="reg-tile-val">12:00 PM IST</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Working Registration Form with CRM hook -->
+        <!-- Working Registration Form with CRM hook -->
+        <form id="regForm" onsubmit="submitRegistration(event)">
+          <div class="reg-form-grid">
+            <!-- Full Name Field -->
+            <div class="field-group">
+              <label class="field-label" for="userName">
+                <span class="field-label-left">
+                  <span class="field-icon">👤</span>
+                  <span class="field-title">Full Name</span>
+                  <span class="req-star">*</span>
+                </span>
+                <span class="field-badge">Required</span>
+              </label>
+              <input type="text" id="userName" class="field-input" placeholder="e.g. Rahul Sharma (Brand Founder)" minlength="2" pattern="^[a-zA-Z\s]+$" title="Name should only contain letters and spaces." required>
+            </div>
+
+            <!-- WhatsApp Number Field -->
+            <div class="field-group">
+              <label class="field-label" for="userPhone">
+                <span class="field-label-left">
+                  <span class="field-icon">💬</span>
+                  <span class="field-title">WhatsApp Number</span>
+                  <span class="req-star">*</span>
+                </span>
+                <span class="field-badge">Webinar Link</span>
+              </label>
+              <div class="input-with-prefix">
+                <span class="input-prefix-flag">🇮🇳 +91</span>
+                <input type="tel" id="userPhone" class="field-input has-prefix" placeholder="9876543210" pattern="^[0-9]{10}$" maxlength="10" title="Please enter exactly 10 digits" required>
+              </div>
+            </div>
+
+            <!-- Business Email Field -->
+            <div class="field-group grid-span-2">
+              <label class="field-label" for="userEmail">
+                <span class="field-label-left">
+                  <span class="field-icon">✉️</span>
+                  <span class="field-title">Business Email</span>
+                  <span class="req-star">*</span>
+                </span>
+                <span class="field-badge">Calendar Invite</span>
+              </label>
+              <input type="email" id="userEmail" class="field-input" placeholder="you@yourbrand.com (or work email)" pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address" required>
+            </div>
+
+            <!-- Selling Status Dropdown -->
+            <div class="field-group">
+              <label class="field-label" for="userEcom">
+                <span class="field-label-left">
+                  <span class="field-icon">🛒</span>
+                  <span class="field-title">Do you currently sell online?</span>
+                </span>
+                <span class="field-badge optional">Experience</span>
+              </label>
+              <select id="userEcom" class="field-select" required>
+                <option value="" disabled selected>⚡ Select your online selling status...</option>
+                <option value="yes">🟢 Yes, active online store</option>
+                <option value="planning">🚀 Currently planning & setting up</option>
+                <option value="no">🌱 Not yet / Exploring dropshipping</option>
+              </select>
+            </div>
+
+            <!-- Business Type Dropdown -->
+            <div class="field-group">
+              <label class="field-label" for="userRole">
+                <span class="field-label-left">
+                  <span class="field-icon">💼</span>
+                  <span class="field-title">Business Type</span>
+                </span>
+                <span class="field-badge optional">Your Role</span>
+              </label>
+              <select id="userRole" class="field-select" required>
+                <option value="" disabled selected>🎯 Select your business category...</option>
+                <option value="shopify_seller">🛍️ Shopify / D2C Store Owner</option>
+                <option value="marketplace">📦 Amazon / Flipkart Seller</option>
+                <option value="entrepreneur">💡 Aspiring Brand Founder</option>
+                <option value="other">💼 Other E-commerce Operator</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Creative Privacy Trust Card -->
+          <div class="form-trust-card">
+            <div class="trust-shield-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7EBE32" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div class="trust-text">
+              <strong>100% Privacy Protected:</strong> We use your details solely to process your webinar registration and send your live access link via WhatsApp & Email. Zero spam.
+            </div>
+          </div>
+
+          <!-- Creative Consent Checkbox -->
+          <label class="consent-line" for="userConsent">
+            <input id="userConsent" type="checkbox" required>
+            <span class="consent-text">
+              I agree to receive <strong class="consent-highlight">webinar access link & reminders</strong> on WhatsApp and Email as per agreed terms.
+            </span>
+          </label>
+
+          <!-- Creative CTA Button Shell -->
+          <div class="form-submit-shell">
+            <button type="submit" id="submitBtn" class="btn-cta btn-submit-creative">
+              <span class="btn-main-label">REGISTER FOR FREE NOW →</span>
+              <span class="btn-sub-note">⚡ Free Live Webinar • 1 Nov • 12 PM IST</span>
+            </button>
+            <div class="form-urgency-note">
+              <span class="urgency-live-dot" aria-hidden="true"></span><span class="urgency-text"><strong class="urgency-label">Free Registration:</strong> Limited live attendee slots for 1 November 2026</span>
+            </div>
+          </div>
+
+          <div id="regSuccessAlert" class="form-alert-box success" style="display: none;">
+            Registration saved successfully. Please watch for joining details from the organizer.
+          </div>
+        </form>
+
+        <!-- Persistent Registration Confirmation Card (Remains visible even if user doesn't join or closes modal) -->
+        <div id="regPersistentCard" class="reg-persistent-card" style="display: none;">
+          <div class="reg-persistent-badge">🎉 Registration Successful!</div>
+          <h3 class="reg-persistent-title">You're officially registered for the GLS Dropshipping Webinar.</h3>
+          <div class="reg-persistent-schedule">
+            <span>📅 1 November 2026</span>
+            <span class="reg-persistent-dot">•</span>
+            <span>⏰ 12:00 PM IST</span>
+          </div>
+          <p class="reg-persistent-desc">
+            Join our official WhatsApp group to receive your webinar joining link, important updates, and reminders.
+          </p>
+          <a href="https://chat.whatsapp.com/GBa1VBnEEKOJWfcyigHaUq?s=cl&p=a&mlu=4&ilr=4" class="btn-cta wa-persistent-btn" onclick="handleWhatsAppGroupClick(event)">
+            <span class="wa-btn-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.888 9.885m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+            </span>
+            <span class="wa-btn-label">Join Official WhatsApp Group</span>
+            <span class="wa-btn-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 12: FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-content-flex">
+      <div>
+        <a href="https://www.gomzilifesciences.in/aboutUs" target="_blank" rel="noopener">
+          <img src="/gls-logo.webp" alt="Gomzi Life Sciences Logo" style="height: 64px; width: auto; margin-bottom: 16px; display: block;">
+        </a>
+        <p>Gomzi Life Sciences LLP — Certified Third-Party Supplement Manufacturer.</p>
+        <p>Surat, Gujarat, India.</p>
+      </div>
+
+      <div class="footer-links-row">
+        <a href="https://www.gomzilifesciences.in/aboutUs" target="_blank" rel="noopener">About Gomzi Life Sciences</a>
+        <a href="#register">Register</a>
+        <a href="#heroCountdown">Webinar Schedule</a>
+      </div>
+
+      <div>
+        © 2026 Gomzi Life Sciences LLP. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Registration CTA -->
+  <div class="mobile-sticky-bar">
+    <a href="#register" class="btn-cta">REGISTER FOR FREE • <span style="color: #bbf781; font-weight: 800;">1 NOV • 12 PM IST</span></a>
+  </div>
+
+  <!-- ==========================================================================
+       SCRIPTS: ACCURATE IST COUNTDOWN, FAQ INTERACTION & FORM VALIDATION
+       ========================================================================== -->
+  <script src="/config.js"></script>
+  <!-- Registration Success Screen / WhatsApp Modal -->
+  <div id="waSuccessModal" class="wa-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="waModalTitle">
+    <div class="wa-modal-box">
+      <div class="wa-modal-icon">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <div class="wa-success-badge">🎉 Registration Successful!</div>
+      
+      <h3 id="waModalTitle" class="wa-modal-title">You're officially registered for the GLS Dropshipping Webinar.</h3>
+      
+      <div class="wa-modal-schedule">
+        <span>📅 1 November 2026</span>
+        <span class="wa-schedule-divider">•</span>
+        <span>⏰ 12:00 PM IST</span>
+      </div>
+
+      <p class="wa-modal-subtitle">
+        Join our official WhatsApp group to receive your webinar joining link, important updates, and reminders.
+      </p>
+      
+      <!-- Prominent Green Join Button -->
+      <a id="waChannelLink" href="https://chat.whatsapp.com/GBa1VBnEEKOJWfcyigHaUq?s=cl&p=a&mlu=4&ilr=4" class="wa-btn-cta" onclick="handleWhatsAppGroupClick(event)">
+        <span class="wa-btn-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.888 9.885m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+        </span>
+        <span class="wa-btn-label">Join Official WhatsApp Group</span>
+        <span class="wa-btn-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <!-- 3-Second Automatic WhatsApp Redirect Notice -->
+      <div class="wa-countdown-notice">
+        ⚡ Redirecting to WhatsApp Group in <strong id="waCountdownNum">3</strong> seconds...
+      </div>
+
+      <button type="button" class="wa-close-btn" onclick="closeWaModal()">Dismiss & view registration details</button>
+    </div>
+  </div>
+
+  <script>
+    // FAQ Accordion Interaction
+    function toggleFaq(btn) {
+      const parent = btn.parentElement;
+      const isActive = parent.classList.contains('active');
+      document.querySelectorAll('.faq-node').forEach(item => item.classList.remove('active'));
+      if (!isActive) {
+        parent.classList.add('active');
+      }
+    }
+
+    // Accurate Countdown to 1 November 2026, 12:00 PM IST (UTC+05:30)
+    function setupISTCountdown() {
+      // 1 Nov 2026 12:00:00 IST = 1 Nov 2026 06:30:00 UTC
+      const targetTime = new Date('2026-11-01T12:00:00+05:30').getTime();
+
+      function update() {
+        const now = new Date().getTime();
+        const diff = targetTime - now;
+
+        if (diff <= 0) {
+          document.getElementById('heroCountdown').innerHTML = "<span style='color:var(--gls-green); font-weight:700;'>Session Started!</span>";
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById('c-days').textContent = String(days).padStart(2, '0');
+        document.getElementById('c-hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('c-mins').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('c-secs').textContent = String(seconds).padStart(2, '0');
+      }
+
+      update();
+      setInterval(update, 1000);
+    }
+
+    // Submit to the actual MongoDB Atlas-backed API; never fake success.
+    async function submitRegistration(event) {
+      event.preventDefault();
+      const submitBtn = document.getElementById('submitBtn');
+      const alertBox = document.getElementById('regSuccessAlert');
+      const apiBase = window.DROPSHIPPING_API_URL || `http://${window.location.hostname}:5000`;
+
+      // Extract UTM and source analytics from URL query string
+      const urlParams = new URLSearchParams(window.location.search);
+      const rawPhone = document.getElementById('userPhone').value.trim();
+      const rawName = document.getElementById('userName').value.trim();
+
+      const payload = {
+        name: rawName,
+        fullName: rawName,
+        phone: rawPhone,
+        phoneNumber: rawPhone,
+        countryCode: '+91',
+        email: document.getElementById('userEmail').value.trim(),
+        ecommerceStatus: document.getElementById('userEcom').value,
+        ecommerce_status: document.getElementById('userEcom').value,
+        businessType: document.getElementById('userRole').value,
+        business_type: document.getElementById('userRole').value,
+        consent: document.getElementById('userConsent').checked,
+        utmSource: urlParams.get('utm_source') || urlParams.get('source') || 'direct',
+        utmMedium: urlParams.get('utm_medium') || null,
+        utmCampaign: urlParams.get('utm_campaign') || null,
+        utmContent: urlParams.get('utm_content') || null,
+        utmTerm: urlParams.get('utm_term') || null,
+        registrationSource: 'landing-page',
+        source: 'dropshipping-c'
+      };
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="btn-main-label">Saving Your Seat...</span><span class="btn-sub-note">Please wait</span>';
+      alertBox.style.display = 'none';
+      alertBox.classList.remove('error');
+
+      try {
+        const targetUrl = `${apiBase.replace(/\/$/, '')}/api/registrations`;
+        let response;
+        try {
+          response = await fetch(targetUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+        } catch (netErr) {
+          console.error('[Registration Network Error]', netErr, 'Target URL:', targetUrl);
+          throw new Error('Unable to connect to the registration server. If you are using a mobile device, please confirm you are connected to the same Wi-Fi network.');
+        }
+
+        let result = {};
+        try {
+          result = await response.json();
+        } catch (_) {
+          result = {};
+        }
+
+        if (!response.ok) {
+          if (response.status === 400) {
+            throw new Error(result.message || 'Please check all required fields and verify your phone number.');
+          } else if (response.status === 503) {
+            throw new Error(result.message || 'Registration service is temporarily reconnecting. Please try again in a few moments.');
+          } else {
+            throw new Error(result.message || 'Unable to save your registration at this moment. Please try again shortly.');
+          }
+        }
+
+        event.target.reset();
+        showRegistrationSuccess(result.registrationId, result.alreadyRegistered);
+      } catch (error) {
+        console.error('[Registration Failure]', error);
+        alertBox.textContent = error.message || 'Unable to connect to the registration service. Please try again later.';
+        alertBox.classList.add('error');
+        alertBox.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span class="btn-main-label">REGISTER FOR FREE NOW →</span><span class="btn-sub-note">⚡ Free Live Webinar • 1 Nov • 12 PM IST</span>';
+      }
+    }
+
+    const WA_GROUP_URL = 'https://chat.whatsapp.com/GBa1VBnEEKOJWfcyigHaUq?s=cl&p=a&mlu=4&ilr=4';
+    const WA_CHANNEL_URL = WA_GROUP_URL; // backward compatibility
+    let currentRegistrationId = null;
+    let waAutoTimer = null;
+
+    // Interaction telemetry: 'shown' or 'clicked' (NOT proof of group membership)
+    function trackInviteInteraction(event) {
+      if (!currentRegistrationId) return;
+      const apiBase = window.DROPSHIPPING_API_URL || `http://${window.location.hostname}:5000`;
+      const url = `${apiBase.replace(/\/$/, '')}/api/registrations/track-invite`;
+      const payload = JSON.stringify({ registrationId: currentRegistrationId, event });
+
+      try {
+        if (navigator.sendBeacon) {
+          navigator.sendBeacon(url, new Blob([payload], { type: 'application/json' }));
+        } else {
+          fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: payload,
+            keepalive: true
+          }).catch(() => {});
+        }
+      } catch (_) {}
+    }
+
+    let waTimer = null;
+
+    // Handles user clicking the "Join Official WhatsApp Group →" button or auto-timer
+    function handleWhatsAppGroupClick(event) {
+      if (event && event.preventDefault) event.preventDefault();
+      if (waTimer) {
+        clearInterval(waTimer);
+        waTimer = null;
+      }
+      trackInviteInteraction('clicked');
+
+      // Device-optimized navigation
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      if (isMobile) {
+        // Mobile: OS universal link handling opens WhatsApp native app directly
+        window.location.href = WA_GROUP_URL;
+      } else {
+        // Desktop: opens WhatsApp Web / app invite preview in a clean new tab
+        window.open(WA_GROUP_URL, '_blank', 'noopener,noreferrer');
+      }
+    }
+
+    function showRegistrationSuccess(regId, alreadyRegistered) {
+      currentRegistrationId = regId;
+      const modal = document.getElementById('waSuccessModal');
+      const persistentCard = document.getElementById('regPersistentCard');
+      const form = document.getElementById('regForm');
+
+      // 1. Show persistent card on the page so confirmation remains visible even if user dismisses modal
+      if (persistentCard) persistentCard.style.display = 'block';
+      if (form) form.style.display = 'none';
+
+      // 2. Open modal
+      if (modal) modal.classList.add('active');
+
+      // 3. Track 'shown' event
+      trackInviteInteraction('shown');
+
+      // 4. Start 3-second automatic redirect countdown
+      let countdown = 3;
+      const countEl = document.getElementById('waCountdownNum');
+      if (countEl) countEl.textContent = countdown;
+      if (waTimer) clearInterval(waTimer);
+
+      waTimer = setInterval(() => {
+        countdown -= 1;
+        if (countEl) countEl.textContent = countdown;
+        if (countdown <= 0) {
+          clearInterval(waTimer);
+          waTimer = null;
+          handleWhatsAppGroupClick();
+        }
+      }, 1000);
+    }
+
+    function closeWaModal() {
+      if (waTimer) {
+        clearInterval(waTimer);
+        waTimer = null;
+      }
+      const modal = document.getElementById('waSuccessModal');
+      if (modal) modal.classList.remove('active');
+      const persistentCard = document.getElementById('regPersistentCard');
+      if (persistentCard) {
+        persistentCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setupISTCountdown();
+
+      // Autoplay video on scroll
+      const video = document.getElementById('heroVideo');
+      const unmuteBtn = document.getElementById('unmuteBtn');
+      
+      if (video) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              video.play().catch(err => console.log('Autoplay prevented:', err));
+            } else {
+              video.pause();
+            }
+          });
+        }, { threshold: 0.5 });
+        
+        observer.observe(video);
+      }
+
+      if (unmuteBtn && video) {
+        unmuteBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          video.muted = false;
+          unmuteBtn.classList.add('hidden');
+          // Ensure it's playing in case it was paused
+          video.play().catch(err => console.log('Play prevented:', err));
+        });
+
+        video.addEventListener('volumechange', () => {
+          if (!video.muted && video.volume > 0) {
+            unmuteBtn.classList.add('hidden');
+          }
+        });
+      }
+    });
+  </script>
+  <script type="module" src="/src/process-timeline.js"></script>
+</body>
+</html>
