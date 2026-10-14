@@ -30,7 +30,8 @@ app.use(cors({
       /^http:\/\/192\.168\.\d{1,3}\.\d{1,3}(:\d+)?$/.test(origin) ||
       /^http:\/\/10\.\d{1,3}\.\d{1,3}\.\d{1,3}(:\d+)?$/.test(origin) ||
       /^http:\/\/172\.(1[6-9]|2\d|3[0-1])\.\d{1,3}\.\d{1,3}(:\d+)?$/.test(origin) ||
-      origin.endsWith('.gomzilifesciences.in')
+      origin.endsWith('.gomzilifesciences.in') ||
+      origin.endsWith('.vercel.app')
     ) {
       return callback(null, true);
     }
