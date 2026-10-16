@@ -295,30 +295,7 @@ app.post('/api/registrations', async (req, res) => {
       });
 
       if (existingRegistration) {
-        await collection.updateOne(
-          { _id: existingRegistration._id },
-          {
-            $set: {
-              fullName: resolvedName,
-              name: resolvedName,
-              phoneNumber: phoneData.normalized,
-              phone: phoneData.normalized,
-              countryCode: phoneData.countryCode,
-              rawPhoneInput: rawPhone,
-              ecommerceStatus: ecommerceStatus,
-              ecommerce_status: ecommerceStatus,
-              businessType: businessType,
-              business_type: businessType,
-              updatedAt: now
-            }
-          }
-        );
-
-        return res.status(200).json({
-          message: 'You are already registered for this webinar! We have refreshed your details.',
-          alreadyRegistered: true,
-          registrationId: existingRegistration._id
-        });
+        leadDocument.isRepeat = true;
       }
 
       const insertResult = await collection.insertOne(leadDocument);
@@ -329,7 +306,8 @@ app.post('/api/registrations', async (req, res) => {
 
       return res.status(201).json({
         message: 'Registration saved successfully.',
-        registrationId: insertResult.insertedId
+        registrationId: insertResult.insertedId,
+        alreadyRegistered: Boolean(existingRegistration)
       });
     } catch (dbErr) {
       console.warn('Atlas direct save failed; saving to resilient local buffer:', dbErr.message);
