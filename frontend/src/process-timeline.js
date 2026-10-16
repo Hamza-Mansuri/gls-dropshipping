@@ -32,6 +32,80 @@ export function initProcessTimeline() {
 
   // Reduced motion preference check
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------------------------------------------------------------------
+     STEP 05 ACHIEVEMENT BADGE
+     Driven by the very same ScrollTrigger progress value that draws the
+     glowing connector, so the reveal can never drift out of sync with the
+     line reaching the Step 05 circle.
+
+     - One timeline is built per reveal and discarded afterwards, so no
+       tweens can ever stack up or double-fire.
+     - A reveal/reset hysteresis band keeps the badge from flickering when
+       the user jitters around the threshold.
+     - The badge is out of flow (absolutely positioned on the grid), so showing
+       and hiding it cannot shift layout or ScrollTrigger start/end positions.
+     --------------------------------------------------------------------- */
+  const achievementBadge = grid.querySelector('.flow-achievement');
+
+  // Reveal threshold mirrors the existing Step 05 activation threshold (0.25 * 4 - 0.012).
+  const ACHIEVEMENT_REVEAL_AT = 0.988;
+  const ACHIEVEMENT_RESET_AT = 0.962;
+
+  let achievementVisible = false;
+  let achievementTl = null;
+
+  function showAchievement() {
+    if (achievementVisible || !achievementBadge) return;
+    achievementVisible = true;
+
+    if (achievementTl) {
+      achievementTl.kill();
+      achievementTl = null;
+    }
+
+    // Cancel any in-flight reset so forward + reverse scrolling can never
+    // produce overlapping animations.
+    gsap.killTweensOf(achievementBadge);
+
+    // Offset by 0.06s so the Step 05 circle pulse lands just before the pop.
+    achievementTl = gsap.timeline({
+      onComplete: () => {
+        // Release the compositor hint once the badge is settled.
+        gsap.set(achievementBadge, { willChange: 'auto' });
+      }
+    });
+
+    achievementTl.fromTo(
+      achievementBadge,
+      { opacity: 0, scale: 0.75, y: 12 },
+      { opacity: 1, scale: 1, y: 0, duration: 0.55, ease: 'back.out(1.5)' },
+      0.06
+    );
+  }
+
+  function hideAchievement() {
+    if (!achievementVisible || !achievementBadge) return;
+    achievementVisible = false;
+
+    if (achievementTl) {
+      achievementTl.kill();
+      achievementTl = null;
+    }
+
+    gsap.killTweensOf(achievementBadge);
+    gsap.to(achievementBadge, {
+      opacity: 0, scale: 0.75, y: 12, duration: 0.25, ease: 'power2.in', overwrite: 'auto'
+    });
+  }
+
+  function revealAchievementImmediately() {
+    if (!achievementBadge) return;
+    gsap.killTweensOf(achievementBadge);
+    gsap.set(achievementBadge, { opacity: 1, scale: 1, y: 0 });
+    achievementVisible = true;
+  }
+
   if (prefersReducedMotion) {
     segments.forEach(seg => {
       seg.basePath.style.display = 'block';
@@ -41,6 +115,7 @@ export function initProcessTimeline() {
     });
     headCircle.style.display = 'none';
     stepCards.forEach(c => c.classList.add('step-active'));
+    revealAchievementImmediately();
     return () => {};
   }
 
@@ -264,6 +339,14 @@ export function initProcessTimeline() {
     } else {
       headCircle.style.opacity = '0';
     }
+
+    // 4. Step 05 achievement badge — fires as the glowing line docks at the
+    //    final circle, and smoothly resets on the way back up.
+    if (activeProgress >= ACHIEVEMENT_REVEAL_AT) {
+      showAchievement();
+    } else if (activeProgress < ACHIEVEMENT_RESET_AT) {
+      hideAchievement();
+    }
   }
 
   function setupScrollTrigger() {
@@ -365,6 +448,15 @@ export function initProcessTimeline() {
     if (resizeObserver) resizeObserver.disconnect();
     if (scrollTriggerInstance) scrollTriggerInstance.kill();
     pulseTimers.forEach(t => { if (t) clearTimeout(t); });
+    if (achievementTl) {
+      achievementTl.kill();
+      achievementTl = null;
+    }
+    if (achievementBadge) {
+      gsap.killTweensOf(achievementBadge);
+      gsap.set(achievementBadge, { clearProps: 'all' });
+    }
+    achievementVisible = false;
   };
 }
 

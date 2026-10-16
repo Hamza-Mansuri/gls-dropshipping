@@ -14,6 +14,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
 
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1984414062236037');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+
   <style>
     /* ==========================================================================
        DESIGN TOKENS & RESET (DARK LUXURY D2C AESTHETIC)
@@ -932,17 +947,83 @@
       .flow-step-card .flow-step-img {
         border-color: #8fe53e !important;
       }
+      .flow-achievement {
+        transition: none !important;
+        animation: none !important;
+      }
     }
 
-    .flow-disclaimer-box {
-      margin-top: 24px;
-      text-align: center;
-      padding: 16px;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px dashed var(--border-subtle);
-      border-radius: var(--radius-sm);
-      font-size: 0.85rem;
-      color: var(--text-dim);
+    /* --------------------------------------------------------------------------
+       STEP 05 ACHIEVEMENT BADGE ("One-Day Process")
+       Absolutely positioned on purpose: revealing it must NOT change the Step 05
+       card height, otherwise the connector geometry and the ScrollTrigger start
+       / end positions would both shift mid-scroll. The section reserves the
+       trailing room it needs instead (see .flow-achievement-section).
+
+       Anchored to .flow-steps-grid rather than the Step 05 card, and dropped
+       entirely BELOW the grid (top: 100%). The grid's bottom edge is identical
+       to the Step 05 card's bottom edge, so the badge keeps the same vertical
+       relationship to the Step 05 description on mobile -- but spanning the
+       full grid width also keeps it centred on desktop, where Step 05 is the
+       right-most column and a card-anchored badge would sit off on the edge.
+       Note it must sit outside the grid, not on its bottom edge: on mobile the
+       card fills the full grid width, so an on-the-edge badge would overlap the
+       description. (On desktop the cards are stretched to equal height, which
+       would have hidden that.)
+       -------------------------------------------------------------------------- */
+    .flow-achievement-slot {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      padding-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      z-index: 4;
+    }
+
+    .flow-achievement {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      max-width: 100%;
+      padding: 11px 24px;
+      border-radius: var(--radius-pill);
+      background: linear-gradient(135deg, #9bec44 0%, #7cc02f 55%, #63a324 100%);
+      border: 1px solid rgba(187, 247, 129, 0.65);
+      color: #060807;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 0.96rem;
+      letter-spacing: 0.08em;
+      line-height: 1.1;
+      text-transform: uppercase;
+      white-space: nowrap;
+      box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.5),
+        0 0 22px rgba(116, 183, 46, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
+      transform-origin: 50% 50%;
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+
+    .flow-achievement-icon {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+      fill: none;
+      stroke: #060807;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* Trailing room for the absolutely-positioned badge (see above) */
+    .flow-achievement-section {
+      padding-bottom: 74px !important;
     }
 
     /* ==========================================================================
@@ -1706,24 +1787,66 @@
       color: var(--gls-green);
     }
 
-    /* Sticky Mobile CTA */
+    /* Fixed Bottom Sticky Registration Bar (Desktop - Compact & Sleek) */
     .mobile-sticky-bar {
-      display: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
-      background: rgba(6, 8, 7, 0.95);
+      background: rgba(6, 8, 7, 0.92);
       backdrop-filter: blur(12px);
-      padding: 12px 18px;
-      border-top: 1px solid var(--border-subtle);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 7px 18px;
+      border-top: 1px solid rgba(116, 183, 46, 0.2);
+      box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.5);
       z-index: 999;
     }
 
+    body {
+      padding-bottom: 56px;
+    }
+
     .mobile-sticky-bar .btn-cta {
-      width: 100%;
-      padding: 14px;
-      font-size: 0.95rem;
+      width: auto;
+      min-width: auto;
+      max-width: 480px;
+      padding: 8px 22px;
+      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 3px 14px rgba(116, 183, 46, 0.35);
+    }
+
+    .sticky-cta-main {
+      color: #050806;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .sticky-cta-divider {
+      color: rgba(5, 8, 6, 0.5);
+      font-weight: 900;
+      font-size: 0.8rem;
+    }
+
+    .sticky-cta-date {
+      color: #000000;
+      font-weight: 900;
+      background: rgba(0, 0, 0, 0.12);
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 0, 0, 0.16);
+      letter-spacing: 0.03em;
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
     }
 
     /* ==========================================================================
@@ -1798,6 +1921,28 @@
       }
       .flow-text-content {
         max-width: 250px;
+      }
+      .flow-achievement-slot {
+        padding-top: 18px;
+      }
+      .flow-achievement {
+        font-size: 1.15rem !important;
+        padding: 14px 30px !important;
+        gap: 12px !important;
+        letter-spacing: 0.08em !important;
+        border-width: 1.5px !important;
+        box-shadow:
+          0 10px 28px rgba(0, 0, 0, 0.55),
+          0 0 26px rgba(116, 183, 46, 0.42),
+          inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+      }
+      .flow-achievement-icon {
+        width: 22px !important;
+        height: 22px !important;
+        stroke-width: 2.4 !important;
+      }
+      .flow-achievement-section {
+        padding-bottom: 92px !important;
       }
       .reg-form-grid {
         grid-template-columns: 1fr;
@@ -1940,10 +2085,26 @@
         margin-top: -2px !important;
       }
       .mobile-sticky-bar {
-        display: block;
+        display: flex;
+        padding: 10px 14px;
+      }
+      .mobile-sticky-bar .btn-cta {
+        width: 100%;
+        min-width: unset;
+        max-width: 100%;
+        padding: 12px 10px;
+        font-size: clamp(0.74rem, 3.2vw, 0.9rem);
+        gap: 6px;
+      }
+      .sticky-cta-divider {
+        font-size: 0.9rem;
+      }
+      .sticky-cta-date {
+        padding: 2px 7px;
+        font-size: 0.92em;
       }
       body {
-        padding-bottom: 70px;
+        padding-bottom: 72px;
       }
       .header-meta .header-pill {
         display: none;
@@ -2398,6 +2559,10 @@
   </style>
 </head>
 <body>
+  <!-- Meta Pixel Noscript Fallback -->
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1984414062236037&ev=PageView&noscript=1" alt="">
+  </noscript>
 
   <!-- Top Real-Time Notification -->
   <div class="top-notification">
@@ -2500,7 +2665,7 @@
   <!-- ==========================================================================
        SECTION 4: INTRODUCE THE GLS DROPSHIPPING MODEL
        ========================================================================== -->
-  <section class="section-py" style="background: var(--bg-dark-surface);">
+  <section class="section-py flow-achievement-section" style="background: var(--bg-dark-surface);">
     <div class="container">
       <div class="section-header">
         <span class="section-eyebrow">The 5-Step Sequence</span>
@@ -2614,10 +2779,23 @@
             <p class="flow-step-desc">Products are dispatched through the agreed fulfilment arrangement to your customers.</p>
           </div>
         </div>
-      </div>
 
-      <div class="flow-disclaimer-box">
-        Note: Exact fulfillment and shipping arrangements depend on the agreed operating model chosen for your brand.
+        <!-- Achievement reveal: driven by the same ScrollTrigger progress that
+             draws the glowing connector, so it fires exactly as the line
+             reaches the Step 05 circle.
+             Anchored to the grid rather than the card, so it sits directly under
+             the Step 05 description on mobile AND stays centred on desktop,
+             where Step 05 is the right-most column. The grid's bottom edge is
+             the same as the Step 05 card's bottom edge, so the vertical position
+             is identical either way. -->
+        <div class="flow-achievement-slot">
+          <div class="flow-achievement" data-flow-achievement>
+            <svg class="flow-achievement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M13.6 2.2 4.4 13.4h5.3L9.6 21.8 19.6 10.2h-5.4l-.6-8Z" />
+            </svg>
+            <span class="flow-achievement-label">One-Day Process</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -3220,9 +3398,13 @@
     </div>
   </footer>
 
-  <!-- Sticky Mobile Registration CTA -->
+  <!-- Sticky Fixed Registration CTA (Desktop + Mobile) -->
   <div class="mobile-sticky-bar">
-    <a href="#register" class="btn-cta">REGISTER FOR FREE • <span style="color: #bbf781; font-weight: 800;">1 NOV • 12 PM IST</span></a>
+    <a href="#register" class="btn-cta">
+      <span class="sticky-cta-main">REGISTER FOR FREE</span>
+      <span class="sticky-cta-divider" aria-hidden="true">•</span>
+      <span class="sticky-cta-date">1 NOV • 12 PM IST</span>
+    </a>
   </div>
 
   <!-- ==========================================================================
@@ -3444,6 +3626,22 @@
 
     function showRegistrationSuccess(regId, alreadyRegistered) {
       currentRegistrationId = regId;
+
+      // Meta Pixel: Track successful registration conversion (non-blocking)
+      try {
+        if (typeof window.fbq === 'function') {
+          window.fbq('track', 'CompleteRegistration', {
+            content_name: 'Gomzi Life Sciences Dropshipping Webinar',
+            status: alreadyRegistered ? 'existing' : 'new'
+          });
+          window.fbq('track', 'Lead', {
+            content_name: 'Gomzi Life Sciences Dropshipping Webinar'
+          });
+        }
+      } catch (fbErr) {
+        console.warn('[Meta Pixel Warning]', fbErr);
+      }
+
       const modal = document.getElementById('waSuccessModal');
       const persistentCard = document.getElementById('regPersistentCard');
       const form = document.getElementById('regForm');
