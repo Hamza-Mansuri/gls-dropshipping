@@ -3495,8 +3495,12 @@
     }
 
     // Submit to the actual MongoDB Atlas-backed API; never fake success.
+    let isRegistrationSubmitting = false;
     async function submitRegistration(event) {
       event.preventDefault();
+      if (isRegistrationSubmitting) return;
+      isRegistrationSubmitting = true;
+
       const submitBtn = document.getElementById('submitBtn');
       const alertBox = document.getElementById('regSuccessAlert');
       const apiBase = window.DROPSHIPPING_API_URL || `http://${window.location.hostname}:5000`;
@@ -3528,9 +3532,13 @@
       };
 
       submitBtn.disabled = true;
+      submitBtn.style.pointerEvents = 'none';
       submitBtn.innerHTML = '<span class="btn-main-label">Saving Your Seat...</span><span class="btn-sub-note">Please wait</span>';
       alertBox.style.display = 'none';
       alertBox.classList.remove('error');
+
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 15000); // 15-second mobile network timeout
 
       try {
         const targetUrl = `${apiBase.replace(/\/$/, '')}/api/registrations`;
@@ -3539,12 +3547,18 @@
           response = await fetch(targetUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
+            body: JSON.stringify(payload),
+            signal: controller.signal
           });
         } catch (netErr) {
+          clearTimeout(timeoutId);
           console.error('[Registration Network Error]', netErr, 'Target URL:', targetUrl);
-          throw new Error('Unable to connect to the registration server. If you are using a mobile device, please confirm you are connected to the same Wi-Fi network.');
+          if (netErr.name === 'AbortError') {
+            throw new Error('Connection timed out. Please check your network and tap to try again.');
+          }
+          throw new Error('Unable to connect to the registration service. Please verify your connection and tap to try again.');
         }
+        clearTimeout(timeoutId);
 
         let result = {};
         try {
@@ -3556,10 +3570,12 @@
         if (!response.ok) {
           if (response.status === 400) {
             throw new Error(result.message || 'Please check all required fields and verify your phone number.');
+          } else if (response.status === 429) {
+            throw new Error('High registration volume from your network. Please wait a moment and try again.');
           } else if (response.status === 503) {
-            throw new Error(result.message || 'Registration service is temporarily reconnecting. Please try again in a few moments.');
+            throw new Error(result.message || 'Registration service is temporarily reconnecting. Please tap again.');
           } else {
-            throw new Error(result.message || 'Unable to save your registration at this moment. Please try again shortly.');
+            throw new Error(result.message || 'Unable to save your registration at this moment. Please tap to try again.');
           }
         }
 
@@ -3567,11 +3583,13 @@
         showRegistrationSuccess(result.registrationId, result.alreadyRegistered);
       } catch (error) {
         console.error('[Registration Failure]', error);
-        alertBox.textContent = error.message || 'Unable to connect to the registration service. Please try again later.';
+        alertBox.textContent = error.message || 'Unable to connect to the registration service. Please try again.';
         alertBox.classList.add('error');
         alertBox.style.display = 'block';
       } finally {
+        isRegistrationSubmitting = false;
         submitBtn.disabled = false;
+        submitBtn.style.pointerEvents = 'auto';
         submitBtn.innerHTML = '<span class="btn-main-label">REGISTER FOR FREE NOW →</span><span class="btn-sub-note">⚡ Free Live Webinar • 1 Nov • 12 PM IST</span>';
       }
     }

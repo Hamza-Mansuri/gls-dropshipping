@@ -41,9 +41,25 @@ app.use(cors({
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
 }));
+app.set('trust proxy', 1);
 app.options('*', cors());
 app.use(express.json({ limit: '25kb' }));
-app.use('/api/registrations', rateLimit({ windowMs: 15 * 60 * 1000, limit: 30, standardHeaders: 'draft-7', legacyHeaders: false }));
+
+// Resilient rate limiter accommodating shared cellular carrier IPs (Jio/Airtel CGNAT)
+const registrationLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 150,
+  standardHeaders: 'draft-7',
+  legacyHeaders: false,
+  message: {
+    errorType: 'RATE_LIMIT_EXCEEDED',
+    message: 'Too many requests from this network. Please wait a few moments and try again.'
+  }
+});
+app.use('/api/registrations', registrationLimiter);
+
+// Project-scoped configuration: registration confirmation emails are explicitly DISABLED for dropshipping webinar
+const ENABLE_REGISTRATION_EMAILS = process.env.ENABLE_REGISTRATION_EMAILS === 'true';
 
 /**
  * Normalizes phone numbers:
@@ -222,11 +238,13 @@ app.get('/api/health', (req, res) => res.json({
   database: collection ? 'connected' : 'not_configured',
   collection: 'registrations',
   pendingSyncCount: readPendingRegistrations().length,
-  emailWorker: process.env.EMAIL_WORKER_ENABLED === 'true' ? 'enabled' : 'disabled'
+  registrationEmails: ENABLE_REGISTRATION_EMAILS ? 'enabled' : 'disabled',
+  emailWorker: (ENABLE_REGISTRATION_EMAILS && process.env.EMAIL_WORKER_ENABLED === 'true') ? 'enabled' : 'disabled'
 }));
 
 // Main Registration Endpoint (Zero-Downtime Guarantee)
 app.post('/api/registrations', async (req, res) => {
+  const reqStart = performance.now();
   const parsed = registrationSchema.safeParse(req.body);
   if (!parsed.success) {
     const errorDetails = parsed.error.issues.map(i => i.message).join(', ');
@@ -286,25 +304,30 @@ app.post('/api/registrations', async (req, res) => {
   // If MongoDB Atlas is connected, save directly
   if (collection) {
     try {
-      const existingRegistration = await collection.findOne({
-        email: normalizedEmail,
-        $or: [
-          { webinarName: WEBINAR_CONFIG.title },
-          { project: 'dropshipping-c' }
-        ]
-      });
+      const dbStart = performance.now();
 
-      if (existingRegistration) {
-        leadDocument.isRepeat = true;
-      }
+      // Parallel execution: execute covered duplicate check and insertion concurrently over pooled connections
+      const [existingRegistration, insertResult] = await Promise.all([
+        collection.findOne(
+          { email: normalizedEmail, project: 'dropshipping-c' },
+          { projection: { _id: 1 } }
+        ),
+        collection.insertOne(leadDocument)
+      ]);
 
-      const insertResult = await collection.insertOne(leadDocument);
+      const dbDur = (performance.now() - dbStart).toFixed(1);
+      const totalDur = (performance.now() - reqStart).toFixed(1);
+      res.setHeader('Server-Timing', `db;dur=${dbDur}, total;dur=${totalDur}`);
 
-      if (emailSystem) {
-        await emailSystem.queueWebinarEmails(leadDocument, WEBINAR_CONFIG);
+      // Registration emails are explicitly disabled for dropshipping. If enabled in future, queue asynchronously
+      if (ENABLE_REGISTRATION_EMAILS && emailSystem) {
+        emailSystem.queueWebinarEmails(leadDocument, WEBINAR_CONFIG).catch(err => {
+          console.warn('[Email Queue Non-Fatal]', err.message);
+        });
       }
 
       return res.status(201).json({
+        success: true,
         message: 'Registration saved successfully.',
         registrationId: insertResult.insertedId,
         alreadyRegistered: Boolean(existingRegistration)
@@ -321,9 +344,14 @@ app.post('/api/registrations', async (req, res) => {
   // Trigger background Atlas reconnect & sync attempt without blocking the user
   initDatabase(1).then(() => syncPendingRegistrations()).catch(() => {});
 
+  const totalDur = (performance.now() - reqStart).toFixed(1);
+  res.setHeader('Server-Timing', `buffer;dur=${totalDur}, total;dur=${totalDur}`);
+
   return res.status(201).json({
+    success: true,
     message: 'Registration saved successfully.',
     registrationId: leadDocument._id,
+    alreadyRegistered: false,
     buffered: true
   });
 });
@@ -374,10 +402,13 @@ async function connectWithRetry(uri, maxRetries = 3) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
       const c = new MongoClient(uri, {
-        serverSelectionTimeoutMS: 15000,
-        maxPoolSize: 5,
-        minPoolSize: 1,
-        maxIdleTimeMS: 30000
+        serverSelectionTimeoutMS: 5000,
+        connectTimeoutMS: 10000,
+        maxPoolSize: 30, // Optimized connection pool capacity for concurrent ad clicks
+        minPoolSize: 5,  // Pre-warmed sockets eliminating TCP+TLS connection overhead
+        maxIdleTimeMS: 45000,
+        retryWrites: true,
+        w: 'majority'
       });
       await c.connect();
       return c;
@@ -403,11 +434,13 @@ async function initDatabase(maxRetries = 2) {
 
       await collection.createIndex({ email: 1, project: 1 });
       await collection.createIndex({ phoneNumber: 1, project: 1 });
+      await collection.createIndex({ createdAt: -1 });
       console.log('MongoDB Atlas connected. Main collection: registrations');
       // Automatically drain any queued registrations into Atlas
       syncPendingRegistrations().catch(() => {});
 
-      if (!emailSystem) {
+      // Email system is only initialized if explicitly enabled via configuration
+      if (ENABLE_REGISTRATION_EMAILS && !emailSystem) {
         const emailConfig = {
           project: 'dropshipping-c',
           workerEnabled: process.env.EMAIL_WORKER_ENABLED === 'true',
